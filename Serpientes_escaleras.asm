@@ -140,8 +140,6 @@ siguiente_celda:
     pop esi
     ret
 
-GERALD
-
 ; Inicio principal
 main:
 inicio_partida:
