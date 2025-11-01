@@ -8,7 +8,7 @@ con alguna animación especial si cae en casillas de serpientes o escaleras.
 
 ## Integrantes:
 - Demian Wing Ugalde          | Carné: 2025106546
-- Sebastián Sánchez Álvarez  | Carné:
+- Sebastián Sánchez Álvarez  | Carné: 2025108378
 - Gerald Vindas              | Carné:
 
 ## Retos Afrontados 
