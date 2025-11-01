@@ -11,6 +11,6 @@ con alguna animación especial si cae en casillas de serpientes o escaleras.
 - Sebastián Sánchez Álvarez  | Carné:
 - Gerald Vindas              | Carné:
 
-# Retos Afrontados 
+## Retos Afrontados 
 
-# Conclusiones 
+## Conclusiones 
