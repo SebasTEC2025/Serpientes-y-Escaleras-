@@ -7,7 +7,7 @@ ensamblador, en donde un jugador avanza sobre un tablero de 100 casillas lanzand
 con alguna animación especial si cae en casillas de serpientes o escaleras.
 
 ## Integrantes:
--Demian Wing Ugalde          | Carné: 2025106546
+- Demian Wing Ugalde          | Carné: 2025106546
 - Sebastián Sánchez Álvarez  | Carné:
 - Gerald Vindas              | Carné:
 
