@@ -5,18 +5,18 @@ extern srand
 extern time
 
 section .data
-    msg_inicio         db "la senda: serpientes y escaleras - tablero 10x10", 10, 0
-    msg_pedir_jug      db "ingrese numero de jugadores (1-3): ", 0
-    msg_turno          db "jugador %d, presione enter para tirar el dado...", 10, 0
-    msg_dado           db "valor del dado: %d", 10, 0
-    msg_posicion       db "jugador %d movido a casilla %d", 10, 0
-    msg_escalera       db "escalera: sube de %d a %d", 10, 0
-    msg_serpiente      db "serpiente: baja de %d a %d", 10, 0
-    msg_movimientos    db "movimientos jugador %d: %d", 10, 0
-    msg_ganador        db "campeon jugador %d en %d movimientos", 10, 0
-    msg_finales        db "estado final de los jugadores:", 10, 0
-    msg_rival          db "rival %d quedo en casilla %d", 10, 0
-    msg_reiniciar      db "desea reiniciar la partida? (1=si, 0=no): ", 0
+    msg_inicio         db "La senda: serpientes y escaleras - tablero 10x10", 10, 0
+    msg_pedir_jug      db "Ingrese numero de jugadores (1-3): ", 0
+    msg_turno          db "Jugador %d, presione enter para tirar el dado...", 10, 0
+    msg_dado           db "Valor del dado: %d", 10, 0
+    msg_posicion       db "Jugador %d movido a casilla %d", 10, 0
+    msg_escalera       db "Escalera: sube de %d a %d", 10, 0
+    msg_serpiente      db "Serpiente: baja de %d a %d", 10, 0
+    msg_movimientos    db "Movimientos jugador %d: %d", 10, 0
+    msg_ganador        db "Campeon jugador %d en %d movimientos", 10, 0
+    msg_finales        db "Estado final de los jugadores:", 10, 0
+    msg_rival          db "Rival %d quedo en casilla %d", 10, 0
+    msg_reiniciar      db "Desea reiniciar la partida? (1=si, 0=no): ", 0
 
     fmt_entero         db "%d", 0
     fmt_enter          db "%c", 0
@@ -37,16 +37,6 @@ section .data
         0,0,0,0,0,0,0,0,0,0,\
         0,0,0,0,0,0,0,0,0,0
 
-    escaleras_ini_db   db 3, 23, 43
-    escaleras_fin_db   db 13, 33, 63
-    escaleras_ini_dd   dd 3, 23, 43
-    escaleras_fin_dd   dd 13, 33, 63
-
-    serpientes_ini_db  db 59, 79, 99
-    serpientes_fin_db  db 51, 71, 91
-    serpientes_ini_dd  dd 59, 79, 99
-    serpientes_fin_dd  dd 51, 71, 91
-
 section .bss
     jug_total          resd 1
     jug_posiciones     resd 3
@@ -57,6 +47,11 @@ section .bss
     bandera_reinicio   resd 1
     tablero            resb 100
     ganador_indice     resd 1
+    
+    escaleras_ini_dd resd 3
+    escaleras_fin_dd resd 3
+    serpientes_ini_dd resd 3
+    serpientes_fin_dd resd 3
 
 section .text
     global main
@@ -176,26 +171,65 @@ copia_tablero:
     inc esi
     loop copia_tablero
 
+    push 0
+    call time
+    add esp, 4
+    push eax
+    call srand
+    add esp,4
     mov ecx, 3
     xor esi, esi
+; Crea escaleras aleatorias en la matriz
 marcar_escaleras:
-    movzx eax, byte [escaleras_ini_db + esi]
+    
+    call rand
+    xor edx,edx
+    mov ebx,89 ;para que no se pase de 90 
+    div ebx 
+    mov eax, edx
+    add eax, 1 ;para que no haya una escalera en la casilla 0
+    ;S:Toma el inicio de la escalera, la guarda como posicion inicial luego se aumenta en 10 para la posicion final
+    mov [escaleras_ini_dd + esi*4], eax 
     mov byte [tablero + eax], '^'
-    movzx eax, byte [escaleras_fin_db + esi]
+    add eax, 10 
+    cmp eax, 99
+    jg validacion_escalera
+    mov [escaleras_fin_dd + esi*4], eax
     mov byte [tablero + eax], 'U'
-    inc esi
+    inc esi 
     loop marcar_escaleras
+    jmp fin_escaleras
 
+validacion_escalera:
+    jmp marcar_escaleras
+fin_escaleras:
     mov ecx, 3
     xor esi, esi
 marcar_serpientes:
-    movzx eax, byte [serpientes_ini_db + esi]
+    call rand
+    xor edx,edx
+    mov ebx,89
+    div ebx 
+    mov eax, edx
+    add eax, 11 ;para que no haya una serpiente en la casilla 0-10
+    cmp eax, 99
+    jg validacion_serpientes
+    ;S:Toma el inicio de la serpiente, la guarda como posicion inicial luego se disminuye en 10 para la posicion final
+    mov [serpientes_ini_dd + esi*4], eax
     mov byte [tablero + eax], 'S'
-    movzx eax, byte [serpientes_fin_db + esi]
+    sub eax, 10
+    cmp eax, 0
+    jl validacion_serpientes
+    mov [serpientes_fin_dd + esi*4], eax
     mov byte [tablero + eax], 'D'
-    inc esi
+    inc esi 
     loop marcar_serpientes
+    jmp fin_serpientes
 
+validacion_serpientes:
+    jmp marcar_serpientes
+
+fin_serpientes:
     push msg_inicio
     call printf
     add esp, 4
