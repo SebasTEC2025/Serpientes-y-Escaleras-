@@ -1,6 +1,6 @@
 <img width="424" height="457" alt="snake-and-laddersd" src="https://github.com/user-attachments/assets/4b978aa8-a74c-4a24-8d0e-c9a3d6adfe16" />
 
-# Proyecto #3: Serpientes Vivas y Escaleras
+# Serpientes Vivas y Escaleras
 
 ## Problema:
 
