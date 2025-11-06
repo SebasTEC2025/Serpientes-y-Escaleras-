@@ -13,24 +13,31 @@ con alguna animación especial si cae en casillas de serpientes o escaleras.
 
 ## Retos Afrontados 
 
-**Tamaño y formato**
-
-Cómo representar un tablero de 100 casillas (10x10).
-
-**Posiciones especiales**
-
-Cómo marcar dónde hay serpientes, escaleras y jugadores o cuando se comparten casillas los elementos anteriormente mencionados
-
 **Visualización**
+
 
 Cómo mostrar el tablero 
 
+**Posiciones especiales**
+
+
+Cómo marcar dónde hay serpientes, escaleras y jugadores o cuando se comparten casillas los elementos anteriormente mencionados
+
+
 **Aleatoriedad**
+
 
 Crear nuevas posiciones para los elementos del juego de forma que cada juego sea único
 
 **Adaptarse al lenguage**
 
+
 Aprender como funciona cada instruccion, las secciones de codigo (.text, .bss , etc), y al complementar nuestro trabajo con librerias del sistema.
+
+
+**Retroalimentación al usuario**
+
+
+Crear mensajes concretos si el usuario ingresó información errónea al sistema
 
 ## Conclusiones 
