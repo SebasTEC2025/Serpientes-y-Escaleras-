@@ -1,4 +1,4 @@
-<img width="1024" height="1024" alt="snake and ladders" src="https://github.com/user-attachments/assets/d41f1895-b389-4a7b-87b2-3a18aaa8a8f1" />
+
 
 # Proyecto #3: Serpientes Vivas y Escaleras
 
