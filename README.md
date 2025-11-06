@@ -13,10 +13,7 @@ con alguna animación especial si cae en casillas de serpientes o escaleras.
 
 ## Retos Afrontados 
 
-**Visualización**
-
-
-Cómo mostrar el tablero 
+**Visualización**: Cómo mostrar el tablero durante las partidas de forma que siempre sea visible para los jugadores
 
 **Posiciones especiales**: Cómo marcar dónde hay serpientes, escaleras y jugadores o cuando se comparten casillas los elementos anteriormente mencionados
 
