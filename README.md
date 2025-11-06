@@ -1,4 +1,5 @@
-
+<img width="780" height="915" alt="snake and ladders mod" src="https://github.com/user-attachments/assets/718036f5-d1fc-4ee6-abc4-29d61a1932db" />
+<p align="center">
 
 # Proyecto #3: Serpientes Vivas y Escaleras
 
