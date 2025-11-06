@@ -42,11 +42,7 @@ section .data
         0,0,0,0,0,0,0,0,0,0,\
         0,0,0,0,0,0,0,0,0,0
 
-    escaleras_ini_dd   dd 3, 23, 43
-    escaleras_fin_dd   dd 13, 33, 63
-
-    serpientes_ini_dd  dd 59, 79, 99
-    serpientes_fin_dd  dd 51, 71, 91
+ 
 
 section .bss
     jug_total          resd 1
@@ -61,6 +57,12 @@ section .bss
     ganador_indice     resd 1
     columnas_usadas    resb 10
     gen_counter        resd 1
+    
+    escaleras_ini_dd   resd 3
+    escaleras_fin_dd  resd 3
+
+    serpientes_ini_dd resd 3
+    serpientes_fin_dd resd 3
 
 section .text
     global main
