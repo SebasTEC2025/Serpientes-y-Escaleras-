@@ -1,3 +1,5 @@
+<img width="1024" height="1024" alt="snake and ladders" src="https://github.com/user-attachments/assets/d41f1895-b389-4a7b-87b2-3a18aaa8a8f1" />
+
 # Proyecto #3: Serpientes Vivas y Escaleras
 
 ## Problema:
@@ -5,6 +7,7 @@
 Desarrollar una simulación del juego “Serpientes Vivas y Escaleras" utilizando lenguaje
 ensamblador, en donde un jugador avanza sobre un tablero de 100 casillas lanzando un dado,
 con alguna animación especial si cae en casillas de serpientes o escaleras.
+
 
 ## Integrantes:
 - Demian Wing Ugalde          | Carné: 2025106546
