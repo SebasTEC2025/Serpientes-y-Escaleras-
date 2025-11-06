@@ -24,3 +24,8 @@ con alguna animación especial si cae en casillas de serpientes o escaleras.
 **Retroalimentación al usuario**: Crear mensajes concretos si el usuario ingresó información errónea al sistema
 
 ## Conclusiones 
+
+El desarrollo de Serpientes Vivas y Escaleras en lenguaje ensamblador permitió comprender en detalle cómo manejar la memoria, los registros y el flujo de control a bajo nivel.
+Se logró simular un juego completo sobre un tablero de 100 casillas, incorporando generación aleatoria, validación de posiciones.
+El proyecto demuestra que incluso con recursos limitados y sin estructuras de alto nivel, es posible implementar una lógica compleja si se planifica correctamente el uso de registros, bucles y secciones de datos.
+En conjunto, este trabajo reforzó conceptos fundamentales de programación estructurada y control de flujo, aplicados a un entorno interactivo y visual.
