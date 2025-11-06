@@ -1,4 +1,4 @@
-# Proyecto#3 Serpientes Vivas y Escaleras
+# Proyecto #3: Serpientes Vivas y Escaleras
 
 ## Problema:
 
@@ -14,9 +14,11 @@ con alguna animación especial si cae en casillas de serpientes o escaleras.
 ## Retos Afrontados 
 
 **Tamaño y formato**
+
 Cómo representar un tablero de 100 casillas (10x10).
 
 **Posiciones especiales**
+
 Cómo marcar dónde hay serpientes, escaleras y jugadores o cuando se comparten casillas los elementos anteriormente mencionados
 
 **Visualización**
